@@ -23,9 +23,7 @@ public class Rectangle {
     }
 
     // "getter" method that returns the length of the Rectangle
-    public int getLength() {
-        return length;
-    }
+    public int getLength() { return length; }
 
     // "setter" methods that sets the length of the Rectangle to a new length
     public void setLength(int newLength) {
