@@ -8,9 +8,9 @@ public class Point {
         this.y = y;
     }
 
-    public Point(int both) {
-        x = both;
-        y = both;
+    public Point(int num) {
+        x = num;
+        y = num;
     }
 
     public Point() {
@@ -22,27 +22,37 @@ public class Point {
         return x;
     }
 
-    public void setX(int newX) { x = newX;}
+    public void setX(int newX) {
+        x = newX;
+    }
 
-    public int getY() { return y; }
+    public int getY() {
+        return y;
+    }
 
-    public void setY(int newY) {y = newY;}
+    public void setY(int newY) {
+        y = newY;
+    }
 
     public String coordinate() {
-        return ("(" + x + ", " + y + ")"); }
+        return "(" + x + ", " + y + ")";
+    }
 
     public String quadrant() {
-        if (x > 0 && y > 0)
-            System.out.println("I");
-        else if (x < 0 && y > 0)
-            System.out.println("II");
-        else if (x < 0 && y < 0)
-            System.out.println("III");
-        else if (x > 0 && y < 0)
-            System.out.println("IV");
-        else if (x = 0 && y = 0)
-            System.out.println("origin");
-        else if (x = 0 || y = 0)
-            System.out.println("on an axis");
+        String quadrant;
+        if (x > 0 && y > 0) {
+            quadrant = "I";
+        } else if (x < 0 && y > 0) {
+            quadrant = "II";
+        } else if (x < 0 && y < 0) {
+            quadrant = "III";
+        } else if (x > 0 && y < 0) {
+            quadrant = "IV";
+        } else if (x == 0 && y == 0) {
+            quadrant = "origin";
+        } else  {
+            quadrant = "on the axis";
+        }
+        return quadrant;
     }
 }
